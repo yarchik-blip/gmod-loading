@@ -1,65 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<meta charset="utf-8">
-<title>Loading...</title>
+<meta charset="UTF-8">
+<title>MLP-City | Адские писюны</title>
 
 <style>
-body{
-    margin:0;
-    background:#0f172a;
-    color:white;
-    font-family:Arial;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    overflow:hidden;
-}
+    body{
+        margin:0;
+        background:#0f172a;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-family:Arial, Helvetica, sans-serif;
+        color:white;
+    }
 
-.loading{
-    text-align:center;
-}
+    .wrapper{
+        text-align:center;
+        width:520px;
+    }
 
-.bar{
-    width:300px;
-    height:6px;
-    background:#1e293b;
-    margin-top:20px;
-    border-radius:5px;
-    overflow:hidden;
-}
+    h1{
+        font-size:28px;
+        margin-bottom:30px;
+        font-weight:600;
+        letter-spacing:1px;
+    }
 
-.progress{
-    width:40%;
-    height:100%;
-    background:#38bdf8;
-    border-radius:5px;
-    animation:load 1.4s infinite ease-in-out;
-}
+    .bar{
+        width:100%;
+        height:12px;
+        background:#1e293b;
+        border-radius:20px;
+        overflow:hidden;
+        position:relative;
+        box-shadow:0 0 20px rgba(0,0,0,0.4) inset;
+    }
 
-@keyframes load{
-    0%   { transform: translateX(-100%); }
-    50%  { transform: translateX(130%); }
-    100% { transform: translateX(-100%); }
-}
+    .progress{
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:40%;
+        background:linear-gradient(90deg,#38bdf8,#0ea5e9,#38bdf8);
+        border-radius:20px;
+        animation:load 1.6s infinite ease-in-out;
+    }
 
+    @keyframes load{
+        0%   { transform:translateX(-120%); }
+        50%  { transform:translateX(170%); }
+        100% { transform:translateX(-120%); }
+    }
+
+    .status{
+        margin-top:20px;
+        font-size:16px;
+        opacity:0.8;
+        animation:blink 1.5s infinite;
+    }
+
+    @keyframes blink{
+        0%,100%{opacity:0.3;}
+        50%{opacity:1;}
+    }
 </style>
 </head>
 
 <body>
 
-<div class="loading">
-    <h1>Подключение к серверу...</h1>
-    <p>Загрузка контента</p>
+<div class="wrapper">
+    <h1>Щас я все какашки съем, мм...</h1>
 
     <div class="bar">
         <div class="progress"></div>
     </div>
 
-    <p style="margin-top:20px">
-        Telegram: t.me/your_channel
-    </p>
+    <div class="status">Прогружаем сервак, чтоб вы дебилы играли</div>
 </div>
 
 </body>
