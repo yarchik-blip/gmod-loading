@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+<title>Loading...</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("https://imgur.com/a/zcity-M74Nb4z") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    text-align:center;
+}
+
+/* контейнер по центру */
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.logo{
+    font-size:70px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.text{
+    font-size:22px;
+    opacity:0.9;
+    margin-top:10px;
+}
+
+/* полоска загрузки */
+.bar{
+    width:400px;
+    height:6px;
+    background:rgba(255,255,255,0.2);
+    margin:30px auto;
+    border-radius:5px;
+    overflow:hidden;
+}
+
+.progress{
+    height:100%;
+    width:0%;
+    background:#00d9ff;
+    animation:load 10s infinite;
+}
+
+@keyframes load{
+    0%{width:0%;}
+    50%{width:100%;}
+    100%{width:0%;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="center">
+    <div class="logo">MLP-City | Адские писюны</div>
+    <div class="text">А вы знали, что в Оренбурге сегодня ничего не произошло...</div>
+
+    <div class="bar">
+        <div class="progress"></div>
+    </div>
+
+    <div class="text">
+        Telegram --> https://t.me/mlpcity
+    </div>
+</div>
+
+</body>
+</html>
